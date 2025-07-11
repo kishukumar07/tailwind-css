@@ -1,5 +1,28 @@
 @import "tailwindcss";
 
+
+/* layer directive */
+@layer base{ 
+  /* default for al base level html tags  */
+  h1{
+    color: aqua
+  }
+}
+
+@layer components{   
+  /* this holds all the custom css files */
+ .upload-btn {
+    @apply  text-cyan-300 flex min-h-14 w-full items-center justify-center gap-1.5 rounded-md;  
+     /* //apply directive  */
+  }
+}
+
+
+
+
+
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,11 +33,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
